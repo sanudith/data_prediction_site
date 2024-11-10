@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data USage Predictor Site</title>
+    <link rel="stylesheet" href="HomePage.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">SMH Technologies</div>
+        <input type="checkbox" id="toggle">
+        <label for="toggle"> 
+            <img class="menu" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQcRCwNIHXgysCmSjnyxc4peA8hq0NI7gcQvhjIOY9WLa8wr-lshwxZcgveagSi4UoUBJ8muOPfLmpugzjVro7-5Lrpynl-Ngr_cMsKAzPU9CMwjqQLK7ee_6hf0v2FN_tPDTYAeIKYZLQpvARWwM9D-iHbyJ8OwC1Xd-u-nbDw6HiTzUScSxaVd9yEhD3/s2500/menu1.png" alt="menu">
+        </label>
+        <nav class="navigation">
+            <ul>
+                <li><a href="1">Login</a></li>
+                <li><a href="1">Logout</a></li>
+                <li><a href="1">Inquiries</a></li>
+				<li><a href="1">User Reviews</a></li>
+				
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Background Layers for Fading Effect -->
+    <div id="background1" class="fade-background" style="background-image: url('Images/CoverImage02.jpg');"></div>
+    <div id="background2" class="fade-background" style="background-image: url('Images/CoverImage03.jpg');"></div>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Welcome to the Data Usage Predictor</h1>
+            <h3>We Decide Your Package</h3>
+            <p>Unlock the power of data-driven insights with our innovative website designed to predict mobile data usage.</p>
+            <div class="btn-box">
+                <a href="PredictionPage.html">Predictor</a>
+                <a href="PredictionPage.html">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const backgrounds = [
+            "Images/CoverImage02.jpg",
+            "Images/CoverImage04.jpg",
+            "Images/CoverImage07.jpg",
+			"Images/CoverImage08.jpg",
+			"Images/CoverImage02.jpg",
+			"Images/CoverImage07.jpg"
+        ];
+
+        let currentImageIndex = 0;
+        const changeInterval = 7000;
+        
+        const background1 = document.getElementById('background1');
+        const background2 = document.getElementById('background2');
+
+        function changeBackgroundImage() {
+            // Toggle which background div is visible
+            if (currentImageIndex % 2 === 0) {
+                background1.style.backgroundImage = `url(${backgrounds[currentImageIndex]})`;
+                background1.style.opacity = "1";
+                background2.style.opacity = "0";
+            } else {
+                background2.style.backgroundImage = `url(${backgrounds[currentImageIndex]})`;
+                background2.style.opacity = "1";
+                background1.style.opacity = "0";
+            }
+
+            // Move to the next image
+            currentImageIndex = (currentImageIndex + 1) % backgrounds.length;
+        }
+
+        setInterval(changeBackgroundImage, changeInterval);
+        changeBackgroundImage();
+    </script>
+</body>
+</html>
