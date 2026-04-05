@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: url('Images/CoverImage08.jpg'), #121212;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Main container for the pricing table */
+.pricing-container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    padding: 2em;
+    position: relative;
+}
+
+.pricing-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.pricing-subtitle {
+    font-size: 1.2em;
+    color: #b0b0b0;
+    margin-bottom: 2em;
+}
+
+/* Slider container styling */
+.slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.3s ease;
+    gap: 1.5em;
+}
+
+/* Card styling */
+.pricing-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 2.1em;
+    min-width: 300px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for scaling and shadow */
+.pricing-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Darker and more spread shadow */
+    background-color: #2a2a2a; /* Slightly lighter background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    color: #0589e1;
+}
+
+.card-price {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.card-frequency {
+    font-size: 0.9em;
+    color: #b0b0b0;
+    margin-bottom: 1.5em;
+}
+
+/* Features list styling */
+.features-list {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 1.5em;
+    padding: 0;
+    color: #b0b0b0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.features-list li::before {
+    content: "✔";
+    color: #00b0ff;
+    margin-right: 0.5em;
+}
+
+/* Button styling */
+.subscribe-btn {
+    background-color: #045479;
+    color: #ffffff;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #007bb2;
+}
+
+/* Arrow buttons 
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    z-index: 10;
+}
+
+.arrow-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.arrow-left {
+    left: 0.5em;
+}
+
+.arrow-right {
+    right: 0.5em;
+}*/
+
+/* Compact Modern Arrow Button Styling */
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #ffffff;
+    background: linear-gradient(135deg, #00b0ff, #007bb2);
+    border: none;
+    padding: 0.4em 0.6em;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.2s ease, background 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-btn:hover {
+    transform: translateY(-50%) scale(1.1); /* Slightly enlarge on hover */
+    background: linear-gradient(135deg, #007bb2, #00b0ff); /* Reverse gradient on hover */
+}
+
+.arrow-left {
+    left: 0.5em;
+}
+
+.arrow-right {
+    right: 0.5em;
+}
+
+/* Close Button Styling */
+.close-btn {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	background-color: rgba(255, 75, 75, 0.1);
+	color: #ff4b4b;
+	font-size: 1.1em;
+	padding: 0.3em 0.6em;
+	border: 2px solid rgba(255, 75, 75, 0.4);
+	border-radius: 50px;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.4s ease;
+	cursor: pointer;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn:hover {
+	background-color: #ff4b4b;
+	color: #ffffff;
+	border-color: #ff4b4b;
+	box-shadow: 0px 6px 20px rgba(255, 75, 75, 0.5), 0px 4px 12px rgba(0, 0, 0, 0.3);
+	transform: scale(1.1);
+}

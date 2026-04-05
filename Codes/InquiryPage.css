@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-image: url('Images/CoverImage08.jpg'); /* Add map-like background */
+    background-size: cover; /* Cover the entire screen */
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    backdrop-filter: blur(3px);
+}
+
+.contact-form {
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+    padding: 30px;
+    border-radius: 10px;
+    width: 750px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative; /* Allow absolute positioning inside the form */
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+}
+
+.contact-form p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 20px); /* Ensure proper padding inside */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+    outline: none;
+    box-sizing: border-box; /* Ensure padding does not overflow */
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 80px;
+}
+
+.contact-form button {
+    width: 97.5%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #218838;
+}
+
+.close-button {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #00aaff;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: #ff4444;
+}
